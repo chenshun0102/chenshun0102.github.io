@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>乐队的夏天</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	
+<style>
+	/*星空背景*/
+	body {
+		background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+        background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+        background-attachment: fixed;
+        overflow: scroll;
+	}
+	@keyframes rotate {
+		0% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);}
+		100% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);}
+	}
+	.stars {transform: perspective(500px);transform-style: preserve-3d;position: absolute;bottom: 0;perspective-origin: 50% 100%;left: 50%;animation: rotate 90s infinite linear;}
+	.star {width: 2px;height: 2px;background: #F7F7B6;position: absolute;top: 0;left: 0;transform-origin: 0 0 -300px;transform: translate3d(0, 0, -300px);backface-visibility: hidden;}
+		
+		
+	/*导航*/
+	.nav img{ flot: left; margin-left: 10px;}
+	.nav ul {list-style: none;position: relative;}.nav {width: 1200px;height: 77px;margin: 50px auto;background: #fff;border-radius: 10px;position: relative;}
+	.nav li a{ text-decoration: none; height: 50px; width: 100px;}
+	.nav li {width: 150px;height: 72px;font-size: 20px;text-align: center;line-height: 42px;float: left;cursor: pointer;padding-top: 20px;}
+	.nav li :hover {color:brown;font-weight: bold;border: 2px dotted #B33D3F;border-radius: 10px;}
+
+	/*轮播图*/	
+	.box{ position:relative;width:1000px; height:600px; border:1px solid #ccc; margin:20px auto}
+    .box img{width:1000px; height:600px;}
+    .box a{ display:none;}
+    .box a.current{ display:block;}
+    .DH{ position:absolute;left:50%; bottom:10px; margin-left:-75px;}
+    .DH li{ float:left; background-color:gainsboro; width:10px; height:10px; font-size:0px; margin:0px 4px; border-radius:50%; cursor:pointer;}
+    .DH li.current{ background-color:darkorange;}
+    .JT{ position:absolute;top:50%; width:30px; height:50px; background-color:#000; color:#FFF; opacity:.5; line-height:50px; text-align:center; filter:alpha(opacity=50); margin-top:-25px; display:none;cursor:pointer; font-family:simsun;} 
+    .JT-left{left:0;}
+    .JT-right{ right:0;}
+    
+	/*资讯列表+视频*/
+	#sp{ width: 1000px; margin: auto; padding-top:10px;}
+	#vid{ float:left; margin-top: -58px;}
+	.wrapper{ width:500px; margin:auto; float: right;}
+	#left{ width:500px; border:1px solid #white; height:30px;}
+	#left ul{ list-style:none; padding:0px; margin:0px;}
+    #left ul li{ float: left; display: block; width: 123px; height: 30px; margin: 0px; padding: 0px; border: 1px solid white; text-align: center;padding-top: 10px; color: aliceblue;}
+    #left a{ text-decoration:none; color: aliceblue; display:block;}
+    #left li:hover{ background:#FC6;}
+    #content{ width:498px; height:298px;float:left; overflow:hidden; border:1px solid white;}
+	#content ul li{ display: block; margin: 10px; padding: 10px; width: 350px;}
+	#content ul li a{ color: beige; }
+	#content ul li:hover{ background-color: burlywood;}
+	
+	/*底部*/	
+	#db{ width:1200px;border-top: 1px solid white; margin: 380px 0px 0px 150px;}
+	#db h3{color:lightpink; text-align: center;}
+	#dbr{float:left; width: 200px; margin-left: 100px;}
+	#dbm{float:left; width: 200px; margin-left: 50px;}
+	#dbl{float:left; width: 200px; margin-left: 50px;}
+	.dbb li{ color: white; display: block; text-decoration: none; text-align: center; padding: 5px;}
+	#ddb{ float:left; margin: 10px 0px 0px 150px;}
+	</style>
+</head>
+
+<body>
+	<div class="stars"></div>
+	
+	<div class="nav">
+		<a href="index.html"><img src="图片素材/2.jpg" style="float: left; height: 77px; object-fit: contain;"/></a>
+		<ul id="navBar">
+			<li><a href="乐队现场.html">乐队现场</a></li>
+			<li><a href="#">乐队巡演</a></li>
+			<li><a href="#">乐队赛程</a></li>
+			<li><a href="HOT5.html">HOT5</a></li>
+			<li><a href="#">粉丝通道</a></li>
+			<li><a href="#">参赛乐队</a></li>
+			<li><a href="联系我们.html">联系我们</a></li>
+        </ul>
+		 
+    </div>
+
+	<div id="play" class="box">
+		<div id="TU">
+			<a href="#" class="current"><img src="图片素材/index2.jpg" /></a>
+            <a href="#"><img src="图片素材/Hot3.jpg" /></a>
+            <a href="#"><img src="图片素材/index.jpg" /></a>
+		</div>
+		<div class="DH" id="DH">
+			<ul>
+				<li class="current">1</li>
+                <li>2</li>
+                <li>3</li>  
+			</ul>
+		</div>
+		<div class="JT JT-left"></div>
+		<div class="JT JT-right"></div>
+	</div>
+	
+	<div id="sp">
+		<div id="vid">
+	    <video width="500" height="400" controls >
+			<source src="index.mp4" type="video/mp4">	
+		</video>
+		</div> 
+	<div class="wrapper">
+		<div id="left">
+			<ul>
+				<li><a href="#">最新资讯</a></li>
+				<li><a href="#">乐队日常</a></li>
+				<li><a href="#">巡演购票</a></li>
+				<li><a href="#">常见问题</a></li>
+			</ul>
+		</div>
+
+		<div id="content"> 
+		<div>
+			<ul>
+				<li><a href="#">他来了他来了，他是谁呢！</a></li>
+		        <li><a href="#">震惊！新裤子居然做出这种事情！</a></li>
+		        <li><a href="#">和平和浪全员居然重达这么多斤！</a></li>
+		        <li><a href="#">斯斯与帆的年龄才这么大！</a></li>
+		        <li><a href="#">海龟先生在舞台上这么自然文艺，没想到遇到漂亮小姐姐居然会害羞！</a></li>
+	        </ul>
+        </div>
+		<div>
+			<ul>
+				<li><a href="#">子健还是每天都要抗拒洗澡。</a></li>
+				<li><a href="#">彭磊的大石头唱法任然让人上头。</a></li>
+				<li><a href="#">小羊今天又是被队霸小乐骂的一天。</a></li>
+		        <li><a href="#">马东老师今天又双叒叕被怼了。</a></li>
+		        <li><a href="#">旺福每天都能够给你不一样的甜蜜，就像他说要爱你一兆年。</a></li>
+	        </ul>
+		</div>
+        <div>
+			<ul>
+				<li><a href="#">HOT5巡演武汉站  时间：2019年1月4日</a></li>
+				<li><a href="#">HOT5巡演上海站  时间：2019年1月15日</a></li>
+		        <li><a href="#">HOT5巡演成都站  时间：2019年12月14日</a></li>
+		        <li><a href="#">HOT5巡演南京站  时间：2019年12月6日</a></li>
+		        <li><a href="#">HOT5巡演郑州站  时间：2019年12月20日</a></li>
+			</ul>
+		</div>
+        <div>
+			<ul>
+				<li><a href="联系我们.html">怎么购票，购票渠道在哪？</a></li>
+		        <li><a href="联系我们.html">在哪观看乐队的夏天，爱奇艺还是优酷？</a></li>
+		        <li><a href="联系我们.html">参演乐队有哪些？有海龟先生乐队嘛？</a></li>
+		        <li><a href="联系我们.html">淘汰了的乐队还有机会能继续比赛吗？</a></li>
+		        <li><a href="联系我们.html">想看马东老师打鼓？乐队的夏天第二季等你观看！</a></li>
+	        </ul>
+        </div>
+		</div>
+	</div>	 
+    </div>	
+	
+	<div id="db">
+	<div id="ddb">
+		<a href="index.html"><img src="图片素材/底部.jpg"></a>
+    </div>
+	<div id="dbr">
+		<ul class="dbb">
+			<h3>赞助商</h3>
+			<li>独家冠名：果果昔</li>
+			<li>联合赞助：vivo</li>
+			<li>首席特约：BUICK</li>
+		</ul>
+	</div>
+	<div id="dbm">
+		<ul class="dbb">
+			<h3>超级乐迷</h3>
+			<li>吴青峰</li>
+			<li>马东</li>
+			<li>张亚东</li>
+			<li>乔杉</li>
+			<li>高晓松</li>
+		</ul>
+	</div>
+	<div id="dbl">
+		<ul  class="dbb">
+			<h3>乐夏超话</h3>
+			<li>第二季</li>
+			<li>HOT5</li>
+			<li>演出阵容</li>
+			<li>新裤子</li>
+		</ul>
+	</div>
+    </div>
+	<script>
+		/*星空背景*/
+	$(document).ready(function(){
+		var stars=800;  /*星星的密集程度，数字越大越多*/
+		var $stars=$(".stars");
+		var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+		for(var i=0;i<stars;i++){
+			var $star=$("<div/>").addClass("star");
+			$stars.append($star);
+		}
+		$(".star").each(function(){
+			var cur=$(this);
+			var s=0.2+(Math.random()*1);
+			var curR=r+(Math.random()*300);
+			cur.css({ 
+				transformOrigin:"0 0 "+curR+"px",
+				transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+			})
+		})
+	})
+		
+		/*轮播图*/
+		$(function(){
+		var m=1;
+		var playTime=setInterval(runpay,5000);
+		
+		function runpay(){
+			if(m>2){
+				m=0;
+			}
+			controlplay(m);	
+			m++;
+		}
+		
+		function controlplay(n){
+			$("#TU a").removeClass("current").eq(n).addClass("current");
+			$("#DH li").removeClass("current").eq(n).addClass("current");
+		}
+			
+		$("#play").mouseenter(function(){
+			clearInterval(playTime);
+			$(".JT").fadeIn(300);
+		    }).mouseleave(function(){
+			    playTime=setInterval(runpay,3000);	
+			    $(".JT").fadeOut(300);
+		})
+			
+		$("#DH li").click(function(){
+			controlplay( $(this).index());
+			m=$(this).index()+1;
+		    }).hover(function(){
+			    return  false;
+		})
+		
+		$(".JT").hover(function(){
+				return  false;
+		})
+			
+		$(".JT-right").click(function(){
+			if(m>2){
+				m=0;
+			}
+			controlplay(m);
+			m++;
+		})
+		
+		$(".JT-left").click(function(){
+			m-=2;
+			if(m<0){
+				m=2;
+			}
+			controlplay(m);
+			m++;
+		})
+	})
+	
+		/*列表*/
+	$(function(){
+		$("#left li").mouseover(function(){
+			var index=$(this).index();
+			$("#content div").eq(index).show();
+			$("#content div").eq(index).siblings().hide();	
+		})
+	}) 
+	</script>
+</body>
+</html>

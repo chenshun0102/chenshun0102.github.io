@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们</title>
+
+<script src="jquery-3.4.1.min.js"></script>
+
+<style>
+	/*星空背景*/
+	body {
+		background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+        background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+        background-attachment: fixed;
+        overflow: scroll;
+	}
+	@keyframes rotate {
+		0% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);}
+		100% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);}
+	}
+	.stars {transform: perspective(500px);transform-style: preserve-3d;position: absolute;bottom: 0;perspective-origin: 50% 100%;left: 50%;animation: rotate 90s infinite linear;}
+	.star {width: 2px;height: 2px;background: #F7F7B6;position: absolute;top: 0;left: 0;transform-origin: 0 0 -300px;transform: translate3d(0, 0, -300px);backface-visibility: hidden;}
+	
+	/*导航*/
+	h2{  text-align: center; color: darkorange;font:italic 1em Georgia, serif; font-size: 40px;margin-bottom: 70px;}
+	.nav img{ flot: left; margin-left: 10px;}
+	.nav ul {list-style: none;position: relative;}.nav {width: 1200px;height: 77px;margin: 50px auto;background: #fff;border-radius: 10px;position: relative;}
+	.nav li a{ text-decoration: none; height: 50px; width: 100px;}
+	.nav li {width: 150px;height: 72px;font-size: 20px;text-align: center;line-height: 42px;float: left;cursor: pointer;padding-top: 20px;}
+	.nav li :hover {color:brown;font-weight: bold;border: 2px dotted #B33D3F;border-radius: 10px;}
+	
+	/*消息滚动*/
+	.table{width: 400px;height: 350px;margin: auto;}
+	.table form{width: 100%;}
+	.table .name{width: 280px;margin: 20px auto 30px auto;display: block;height: 35px;border-radius: 20px;border: none;background: rgba(0,0,0,0.2);text-indent: 0.5em;}
+	.table .btn{width: 100px;height: 40px;background: rgba(0,0,0,0.1);border-radius: 8px;border: none;color: white;margin: 0 auto;display: block;}
+	.table{ width: 1200px; margin: auto; }
+	#box{ width:550px; margin:20px; margin-top: 60px; height: 400px; overflow: hidden; float: left; border: 1px solid #FFFFFF;padding-top: 40px;}
+	.item .cn-centent{ width:500px; float:left; margin:5px; }
+	.item{ padding:10px; height:40px; clear:both;}
+	.cn-centent h3{ margin:0px; color: goldenrod;}
+	p{ margin:4px; color:#D5E8DA;}
+	#bt{ margin-left: 250px; margin-bottom: -110px; font-size: 22px;}
+	
+    /*表单*/
+	#tabr h3{ font-size: 22px; text-align: center; }
+	#tabr{ margin-left: 630px;}
+	#fm{ border: 1px solid #F9F9F9;width:550px; height: 380px; margin-top: 100px;}
+	.inp{  height: 40px; margin: 5px; border: 1px solid #FEFEFE; border-radius: 10px; background-color: antiquewhite;  padding:5px; }
+	#em{ float:left; width: 165px;margin-left: 100px;color: lightpink;}
+	#na{width:350px;margin-left: 100px;color: lightpink;}
+	#ph{width:165px;color:lightpink;}
+	#tex{ width: 350px; height: 90px; background-color:beige;border-radius: 10px;color: lightpink; padding:5px; margin: 5px 0px 25px 100px;}
+	#rad{ float:left; margin-bottom: -70px; color:white; }
+	#rad1{ width: 50px; margin-left: 110px; }
+	#rad2{ width:50px; }
+	#sub{ width: 80px; height:40px; border-radius: 10px; margin-left: 340px; background-color:beige; margin-top: -50px; color: lightpink;}
+	
+	/*底部*/
+	#db{ width:1200px;border-top: 1px solid white; margin: 250px 0px 0px 150px;}
+	#db h3{color:lightpink; text-align: center;}
+	#dbr{float:left; width: 200px; margin-left: 100px;}
+	#dbm{float:left; width: 200px; margin-left: 50px;}
+	#dbl{float:left; width: 200px; margin-left: 50px;}
+	.dbb li{ color: white; display: block; text-decoration: none; text-align: center; padding: 5px;}
+	#ddb{ float:left; margin: 10px 0px 0px 150px;}
+</style>
+
+</head>
+<body>
+
+<div class="stars"></div>  <!--背景层，不要删除，不然没有作用-->
+	
+	<div class="nav">
+		<a href="index.html"><img src="图片素材/2.jpg" style="float: left"/></a>
+        <ul id="navBar">
+        <li><a href="乐队现场.html">乐队现场</a></li>
+        <li><a href="#">乐队巡演</a></li>
+			<li><a href="#">乐队赛程</a></li>
+			<li><a href="HOT5.html">HOT5</a></li>
+			<li><a href="#">粉丝通道</a></li>
+			<li><a href="#">参赛乐队</a></li>
+			<li><a href="联系我们.html">联系我们</a></li>
+        </ul>
+		 
+    </div>
+
+<div class="table">	
+	<h2 style="text-align: center;">联系我们</h2>
+	<h3 id="bt">常见问题</h3>
+	<div id="box">	
+		<div class="item">
+			<div class="cn-centent">
+				<h3>巡演问题</h3>
+				<p>乐队巡演HOT5巡演城市为:上海站、南京站、郑州站、武汉站、深圳站、成都站、北京站，更多城市巡演敬请期待。</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="cn-centent">
+				<h3>购票问题</h3>
+		        <p>因票据具有唯一性、时效性等特殊属性，如非活动变更、取消或票品错误等问题，恕不提供退换服务。</p>
+	       </div>
+	    </div> 
+        <div class="item">
+			<div class="cn-centent">
+				<h3>节目赛制</h3>
+				<p>节目组集结了31支具有代表性、影响力的中国青年乐队，通过不同主题单元的内容设计及音乐表演，来角逐中国最热HOT5的五支乐队。</p>
+	        </div>
+	    </div>
+		<div class="item">
+			<div class="cn-centent">
+				<h3>报名参赛</h3>
+		        <p>在各个不同的城市，寻找那些小众的乐队和具有代表性的乐队，就能如果你也想参加，尽情期待我们的第二季《乐队的夏天》。</p>
+	        </div>
+	    </div>
+		<div class="item">
+			<div class="cn-centent">
+				<h3>评分机制</h3>
+		        <p>节目为了公平公正，设立了五位超级乐迷，30位专业乐迷，以及100位的大众乐迷，由观众根据自己的喜好对乐队表演进行投票选择。</p>
+	        </div>
+	    </div>
+	</div>  
+	
+	<div id="tabr">
+		<form action="联系我们.html" id="fm">
+			<h3>用户反馈</h3>
+			<input type="text" value="您的姓名" id="na" class="inp">
+			<input type="text" value="您的邮箱" id="em" class="inp">
+		    <input type="text" value="您的电话" id="ph" class="inp">
+		    <textarea rows="10" cols="30" id="tex">输入您的问题</textarea>
+		    <br>
+		    <div id="rad">
+				<label><input type="radio" id="rad1" name="rad">男士</label>
+		        <lable><input type="radio" id="rad2" name="rad">女士</lable>
+		    </div>
+		    <button id="sub" type="submit" value="提交" >提交</button>
+		</form>
+	</div>
+</div>
+	
+<div id="db">
+	<div id="ddb">
+		<a href="index.html"><img src="图片素材/底部.jpg"></a>
+    </div>
+	<div id="dbr">
+		<ul class="dbb">
+			<h3>赞助商</h3>
+			<li>独家冠名：果果昔</li>
+			<li>联合赞助：vivo</li>
+			<li>首席特约：BUICK</li>
+		</ul>
+	</div>
+	<div id="dbm">
+		<ul class="dbb">
+			<h3>超级乐迷</h3>
+			<li>吴青峰</li>
+			<li>马东</li>
+			<li>张亚东</li>
+			<li>乔杉</li>
+			<li>高晓松</li>
+		</ul>
+	</div>
+	<div id="dbl">
+		<ul  class="dbb">
+			<h3>乐夏超话</h3>
+			<li>第二季</li>
+			<li>HOT5</li>
+			<li>演出阵容</li>
+			<li>新裤子</li>
+		</ul>
+	</div>
+</div>
+
+
+<script>
+	/*星空背景*/
+	$(document).ready(function(){
+		var stars=800;  /*星星的密集程度，数字越大越多*/
+		var $stars=$(".stars");
+		var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+		for(var i=0;i<stars;i++){
+			var $star=$("<div/>").addClass("star");
+			$stars.append($star);
+		}
+		$(".star").each(function(){
+			var cur=$(this);
+			var s=0.2+(Math.random()*1);
+			var curR=r+(Math.random()*300);
+			cur.css({ 
+				transformOrigin:"0 0 "+curR+"px",
+				transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+			})
+		})
+	})
+	
+	/*消息滚动*/
+	$(document).ready(function(){
+	   setInterval(function(){
+		   $(".item").eq(3).fadeOut(600,function(){
+			   $(".item").last().prependTo("#box").delay(200).slideDown(500);
+		   })
+	   },3000);
+   })
+	
+	/*表单提交*/
+	$(document).ready(function(){
+		$("#sub").click(function(){
+			alert("感谢您的反馈！");
+		});
+	});
+</script>
+	
+	
+
+
+</body>
+</html>

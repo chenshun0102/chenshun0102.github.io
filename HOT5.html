@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HOT5</title>
+	<script src="jquery-3.4.1.min.js"></script>
+<style>
+    /*星空背景*/
+	body {
+		background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+        background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+        background-attachment: fixed;
+        overflow: scroll;
+	}
+	@keyframes rotate {
+		0% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);}
+		100% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);}
+	}
+	.stars {transform: perspective(500px);transform-style: preserve-3d;position: absolute;bottom: 0;perspective-origin: 50% 100%;left: 50%;animation: rotate 90s infinite linear;}
+	.star {width: 2px;height: 2px;background: #F7F7B6;position: absolute;top: 0;left: 0;transform-origin: 0 0 -300px;transform: translate3d(0, 0, -300px);backface-visibility: hidden;}
+		
+			
+	/*导航*/
+	.nav img{ flot: left; margin-left: 10px;}
+	.nav ul {list-style: none;position: relative;}.nav {width: 1200px;height: 77px;margin: 50px auto;background: #fff;border-radius: 10px;position: relative;}
+	.nav li a{ text-decoration: none; height: 50px; width: 100px;}
+	.nav li {width: 150px;height: 72px;font-size: 20px;text-align: center;line-height: 42px;float: left;cursor: pointer;padding-top: 20px;}
+	.nav li :hover {color:brown;font-weight: bold;border: 2px dotted #B33D3F;border-radius: 10px;}
+		
+		
+	/*手风琴*/
+	#wrap {overflow:hidden;margin:auto;width:1450px;height:615px;margin-bottom: 40px;}
+	#wrap > ul {width:100%;list-style:none;}
+	#wrap > ul > li {float:left;width:100px;height:615px;cursor:pointer;}
+	#wrap > ul > li:nth-child(1) {background:url('图片素材/Hot1.jpg') no-repeat center/cover;}
+	#wrap > ul > li:nth-child(2) {background:url('图片素材/Hot2.jpg') no-repeat center/cover;}
+	#wrap > ul > li:nth-child(3) {background:url('图片素材/Hot3.jpg') no-repeat center/cover;}
+	#wrap > ul > li:nth-child(4) {background:url('图片素材/Hot4.jpg') no-repeat center/cover;}
+	#wrap > ul > li:nth-child(5) {background:url('图片素材/Hot5.jpg') no-repeat center/cover;width:1000px;}
+	#wrap > ul > li > .text {width:100px;height:90%;background:#000;opacity:.3;}
+	#wrap > ul > li > .text p {padding:120px 30px;font-family:'Microsoft yahei';font-size:25px;color: white;}
+
+
+    /*中间布局*/
+    #hot{ width: 1300px; margin: auto;}
+    #lefttop,#righttop{ float:left; width:600px; margin-right: 100px;}
+    #mid{ width: 800px;margin: auto;}
+    #img{ margin-left: 48px;}
+    #hotleft,#center{ margin-bottom: 20px;}
+    #hotright{ margin-top: 20px;}
+
+		
+	h1{ text-align: center; color: darkorange;font:italic 1em Georgia, serif; font-size: 40px;}
+	h2{  color: darkorange;font:italic 1em Georgia, serif; font-size: 25px;}
+	
+	/*底部*/
+    #db{ width:1200px;border-top: 1px solid white; margin: 30px 0px 0px 150px;}
+	#db h3{color:darkorange; text-align: center;}
+	#dbr{float:left; width: 200px; margin-left: 100px;  }
+	#dbm{float:left; width: 200px; margin-left: 50px; }
+	#dbl{float:left; width: 200px; margin-left: 50px;   }
+	.dbb li{ color: white; display: block; text-decoration: none; text-align: center; padding: 5px;}
+	#ddb{ float:left; margin: 10px 0px 0px 150px;}
+	</style>
+	
+</head>
+
+<body>
+	<div class="stars"></div>
+
+	<div class="nav">
+		<a href="index.html"><img src="图片素材/2.jpg" style="float: left"/></a>
+        <ul id="navBar">
+        <li><a href="乐队现场.html">乐队现场</a></li>
+        <li><a href="#">乐队巡演</a></li>
+			<li><a href="#">乐队赛程</a></li>
+			<li><a href="HOT5.html">HOT5</a></li>
+			<li><a href="#">粉丝通道</a></li>
+			<li><a href="#">参赛乐队</a></li>
+			<li><a href="联系我们.html">联系我们</a></li>
+        </ul>	 
+    </div>
+	
+	<h1>HOT 5</h1>
+	
+	<div id="wrap">
+        <ul>
+            <li>
+                <div class="text">
+                    <p>新裤子</p>
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <p>痛仰</p>
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <p>刺猬</p>
+                </div>
+            </li>
+            <li class="curr">
+                <div class="text">
+                    <p>Click
+						#15</p>
+                </div>
+            </li>
+			 <li class="curr">
+                <div class="text">
+                    <p>盘尼西林</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+	
+	<div id="hot">
+		<div id="hotleft">
+			<div id="lefttop" class="lefttop">
+				<img src="图片素材/痛仰.jpg"/>
+				<h1>HOT2  痛仰</h1>
+				<p>成立于1999年的痛仰乐队（Miserable Faith）是当下中国享有最高声誉的摇滚乐队之一。成员：主唱高虎 吉他宋捷  贝司 张静 鼓手 迟功伟（大伟），组队至今发行专辑及EP共六张，参加各类专场、音乐节演出数百场，获得了覆盖不同年龄层和身份属性的庞大乐迷群。他们从未离开中国摇滚第一线，也是其中少有的始终保持旺盛创作精力并成功实现转型的摇滚劲旅。痛仰与被他们所感染、触动的听者们，一路相互陪伴和见证了彼此的成长。</p>
+			</div>
+			<div id="leftdown" class="leftdown">
+				<img src="图片素材/Click15.jpg">
+				<h1>HOT4  Click#15</h1>
+				<p>2015年，Click#15成立。由主唱兼吉他手Ricky、键盘杨策和鼓手崔竣组成，2016年，Click#15开始在SCHOOL演出；同年， 正式签约“赤曈音乐”。2017年3月19日，发行乐队首张音乐EP《疯客感官》；同年，举行2017“疯客感官”全国巡演。2018年，推出单曲《Get Funky》。2019年，参加音乐综艺节目《乐队的夏天》，最终获得第四名；同年，获得2019网易娱乐盛典年度最具人气乐队奖。</p>
+			</div>
+		</div>
+		<hr width=1300px color=#8060C2 size=3px algin=center/>
+		<div id="center">
+			<div id="mid" class="mid">
+				<h1>HOT1  新裤子</h1>
+				<div id="img">
+				   <img src="图片素材/新裤子一场游戏一场梦.jpg"/>
+				</div>
+				<p>  新裤子（New Pants），中国内地摇滚乐队，由主唱兼吉他手彭磊、主唱兼键盘手庞宽、贝斯手赵梦、鼓手Hayato组成。1997年，乐队与摩登天空签约，并正式改名为“新裤子”，寓意：新潮的朋克乐队，2016年4月，发行乐队第八张音乐专辑《生命因你而火热》，专辑单曲《关于失眠和夜晚的世界》获得第5届阿比鹿音乐奖最佳摇滚单曲奖。2019年，参加原创音乐综艺节目《乐队的夏天》。同年，获得2019华人歌曲音乐盛典和2019亚洲新歌榜的“年度最受欢迎乐队”奖项。</p>
+			</div>
+		</div>
+		<hr width=1300px color=#8060C2 size=3px algin=center/>
+		<div id="hotright">
+			<div id="righttop" class="righttop">
+				<img src="图片素材/刺猬光阴.jpg"/>
+				<h1>HOT3  刺猬</h1>
+				<p>  刺猬乐队，中国内地乐队，由主唱兼吉他手赵子健、贝斯手何一帆、鼓手石璐组成。乐队组建于2003年初，曾参加北京音乐台举办的“ FM97. 4校园音乐先锋”，中国人民大学举办的“歌影年华”等活动。2004年7月，乐队以失控体名义在《我爱摇滚乐》杂志上发表单曲。当年 9 月，乐队更换了鼓手并正式更名为刺猬。2019年7月31日，在第三届CMA唱工委音乐盛典上获得“年度乐队”。10月31日，获亚洲新歌榜2019年度最具人气乐队奖.</p>
+			</div>
+			<div id="rightdown" class="rightdown">
+				<img src="图片素材/盘尼西林夏日之星.jpg"/>
+				<h1>HOT5 盘尼西林</h1>
+				<p>  盘尼西林乐队（Penicillin），中国内地摇滚乐队，由主唱张哲轩（小乐）、贝斯手熊花和鼓手小羊组成。2012年，盘尼西林乐队成立。2014年，乐队在举行了14场“再见2016”全国巡演后解散。2017年，乐队回归并发行了首张音乐专辑《与世界温暖相拥》；同年，在16座城市举行全国巡演 。2018年，获得第9届中国摇滚迷笛奖最佳年度摇滚新人奖。2019年5月，参加音乐综艺节目《乐队的夏天》。</p>
+			</div>
+		</div>
+		<hr width=1300px color=#8060C2 size=3px algin=center/>
+	</div>
+	
+	<div id="db">
+		<div id="ddb">
+		   <a href="index.html"><img src="图片素材/底部.jpg"></a>
+		</div>
+		<div id="dbr">
+		<ul class="dbb">
+			<h3>赞助商</h3>
+			<li>独家冠名：果果昔</li>
+			<li>联合赞助：vivo</li>
+			<li>首席特约：BUICK</li>
+		</ul>
+			</div>
+		<div id="dbm">
+		<ul class="dbb">
+			<h3>超级乐迷</h3>
+			<li>吴青峰</li>
+			<li>马东</li>
+			<li>张亚东</li>
+			<li>乔杉</li>
+			<li>高晓松</li>
+		</ul>
+			</div>
+		<div id="dbl">
+		<ul  class="dbb">
+			<h3>乐夏超话</h3>
+			<li>第二季</li>
+			<li>HOT5</li>
+			<li>演出阵容</li>
+			<li>新裤子</li>
+		</ul>
+			</div>
+	</div>
+	
+	
+	<script>
+	/*星空背景*/
+	$(document).ready(function(){
+		var stars=800;  /*星星的密集程度，数字越大越多*/
+		var $stars=$(".stars");
+		var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+		for(var i=0;i<stars;i++){
+			var $star=$("<div/>").addClass("star");
+			$stars.append($star);
+		}
+		$(".star").each(function(){
+			var cur=$(this);
+			var s=0.2+(Math.random()*1);
+			var curR=r+(Math.random()*300);
+			cur.css({ 
+				transformOrigin:"0 0 "+curR+"px",
+				transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+			})
+		})
+	})
+		
+	/*手风琴*/
+	$(document).ready(function() {
+		$('#wrap li').mouseover(function() {
+			if (!$(this).hasClass('curr')) {
+				$('#wrap li').removeClass('curr');
+				$(this).addClass('curr');
+				$('.curr').stop().animate({
+					width: 1000
+				}, 500, 'linear');
+				$('#wrap li').not('.curr').stop().animate({
+					width: 100
+				}, 500, 'linear');
+			}
+		});
+	})()
+    </script>
+</body>
+</html>

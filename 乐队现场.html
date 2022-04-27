@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>乐队现场</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	
+
+<style>
+	/*星空背景*/
+	body {
+		background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+        background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+        background-attachment: fixed;
+        overflow: scroll;
+	}
+	@keyframes rotate {
+		0% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);}
+		100% {transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);}
+	}
+	.stars {transform: perspective(500px);transform-style: preserve-3d;position: absolute;bottom: 0;perspective-origin: 50% 100%;left: 50%;animation: rotate 90s infinite linear;}
+	.star {width: 2px;height: 2px;background: #F7F7B6;position: absolute;top: 0;left: 0;transform-origin: 0 0 -300px;transform: translate3d(0, 0, -300px);backface-visibility: hidden;}
+		
+	/*导航*/
+	.nav img{ flot: left; margin-left: 10px;}
+	.nav ul {list-style: none;position: relative;}.nav {width: 1200px;height: 77px;margin: 50px auto;background: #fff;border-radius: 10px;position: relative;}
+	.nav li a{ text-decoration: none; height: 50px; width: 100px;}
+	.nav li {width: 150px;height: 72px;font-size: 20px;text-align: center;line-height: 42px;float: left;cursor: pointer;padding-top: 20px;}
+	.nav li :hover {color:brown;font-weight: bold;border: 2px dotted #B33D3F;border-radius: 10px;}
+		
+	h1{ text-align: center; color: darkorange;font:italic 1em Georgia, serif; font-size: 40px;}
+	h2{  color: darkorange;font:italic 1em Georgia, serif; font-size: 25px;}
+		
+	/*瀑布流*/
+		*{margin:0;padding:0;list-style-type:none;}
+		a, img{border:0;}
+		a{text-decoration:none;color:#333;-webkit-transition:color .2s;-moz-transition:color .2s;-o-transition:color .2s;-ms-transition:color .2s;transition:color .2s;}
+		a:hover{text-decoration:underline;color:#ff7d8e;}
+		a:focus{outline:none;}
+		.brand-list{width:1272px;margin:0 auto;}
+		.brand-list .item{position:absolute;width:377px;top:0;left:40%;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+		.brand-list .additem{width:377px;border:none;}
+		.brand-list .item h3{font-size:42px;color:#666;font-family:arial;font-size:18px;font-weight:800;line-height:.8;margin-bottom:20px;}
+		.brand-list .item p{margin-bottom:15px;}
+		.boxgrid{width:377px;height:227px;overflow:hidden;position:relative;}
+		.boxgridq{width:377px;height:488px;overflow:hidden;position:relative;}
+		.item .boxgrid h3{margin:10px 0px 10px 0px;color:#FFF;font:24pt 微软雅黑, sans-serif;letter-spacing:-1px;font-weight:bold;text-align:center;}
+		.boxgrid img{position:absolute;top:0;left:0;border:0;}
+		.boxgrid p{color:#afafaf;font-weight:bold;text-align:center;}	
+		.boxgrid p a{text-decoration:none;color:#FFF;font-family:微软雅黑;font-size:12px;}
+		.boxcaption{float:left;position:absolute;height:200px;width:100%;}
+		.boxcaptiona{float:left;position:absolute;height:200px;width:100%;}
+		.caption .boxcaption{top:165px;left:0px;}
+		.captiona .boxcaptiona{top:427px;left:0px;}
+	
+	/*底部*/
+	#db{ width:1200px;border-top: 1px solid white; margin: 30px 0px 0px 150px;}
+	#db h3{color:lightpink; text-align: center;}
+	#dbr{float:left; width: 200px; margin-left: 100px; margin-top:10px; }
+	#dbm{float:left; width: 200px; margin-left: 50px;  margin-top:10px; }
+	#dbl{float:left; width: 200px; margin-left: 50px;  margin-top:10px; }
+	.dbb li{ color: white; display: block; text-decoration: none; text-align: center; padding: 5px;}
+	#ddb{ float:left; margin: 10px 0px 0px 150px;}
+	</style>
+</head>
+<body>
+	<div class="stars"></div>
+	
+	<div class="nav">
+		<a href="index.html"><img src="图片素材/2.jpg" style="float: left"/></a>
+        <ul id="navBar">
+        <li><a href="乐队现场.html">乐队现场</a></li>
+        <li><a href="#">乐队巡演</a></li>
+			<li><a href="#">乐队赛程</a></li>
+			<li><a href="HOT5.html">HOT5</a></li>
+			<li><a href="#">粉丝通道</a></li>
+			<li><a href="#">参赛乐队</a></li>
+			<li><a href="联系我们.html">联系我们</a></li>
+        </ul>
+		 
+    </div>
+	
+	<h1>乐队现场</h1>
+	
+	<video width="900" height="600" controls style="margin-left:320px;">
+			<source src="乐队巡演.mp4" type="video/mp4">	
+	</video>
+	
+	<div style="width:1272px;position:relative;left:50%;margin-left:-586px; margin-top: 20px;">
+	  <div class="brand-list" id="brand-waterfall">
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/斯斯与帆.jpg"/>
+				<div class="cover boxcaption">
+					<h3>斯斯与帆 </h3>
+					<p><a href="#">我们想要成为以音乐为生的大人</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流12.png"/>
+				<div class="cover boxcaptiona">
+					<h3>海归先生 </h3>
+					<p><a href="#">芭芭拉比，弄麦，噶系里沟道。</a></p>
+				</div>
+			</div>
+		</div> 
+
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/瀑布流.png"/>
+				<div class="cover boxcaption">
+					<h3>刺猬</h3>
+					<p><a href="#">不爱洗澡的诗人</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/瀑布流11.png"/>
+				<div class="cover boxcaption">
+					<h3>九连真人</h3>
+					<p><a href="#">堂吉诃德悲剧</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流7.png"/>
+				<div class="cover boxcaptiona">
+					<h3>梦姐</h3>
+					<p><a href="#">浑身带刺</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流3.png"/>
+				<div class="cover boxcaptiona">
+					<h3>高虎 </h3>
+					<p><a href="#">蜚短流长，不论八卦，除了你，想令我走出去。</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/瀑布流2.png"/>
+				<div class="cover boxcaption">
+					<h3>Click#15</h3>
+					<p><a href="#">FUNK青年</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流4.png"/>
+				<div class="cover boxcaptiona">
+					<h3>新裤子</h3>
+					<p><a href="#">恋爱真的很美好，可美好不会陪你到老。</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/瀑布流1.png"/>
+				<div class="cover boxcaption">
+					<h3>盘尼西林</h3>
+					<p><a href="#">有一种西药。</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流10.png"/>
+				<div class="cover boxcaptiona">
+					<h3>旅行团</h3>
+					<p><a href="#">不要嘲笑我们，我们的爱不值一提。</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="boxgrid captiona boxgridq">
+				<img src="图片素材/瀑布流13.png"/>
+				<div class="cover boxcaptiona">
+					<h3>子健</h3>
+					<p><a href="#">就像太阳一样</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div class="boxgrid caption">
+				<img src="图片素材/朴树.jpg"/>
+				<div class="cover boxcaption">
+					<h3>平凡之路</h3>
+					<p><a href="#">No Fear My Heart</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<div id="db">
+	<div id="ddb">
+		<a href="index.html"><img src="图片素材/底部.jpg"></a>
+    </div>
+	<div id="dbr">
+		<ul class="dbb">
+			<h3>赞助商</h3>
+			<li>独家冠名：果果昔</li>
+			<li>联合赞助：vivo</li>
+			<li>首席特约：BUICK</li>
+		</ul>
+	</div>
+	<div id="dbm">
+		<ul class="dbb">
+			<h3>超级乐迷</h3>
+			<li>吴青峰</li>
+			<li>马东</li>
+			<li>张亚东</li>
+			<li>乔杉</li>
+			<li>高晓松</li>
+		</ul>
+	</div>
+	<div id="dbl">
+		<ul  class="dbb">
+			<h3>乐夏超话</h3>
+			<li>第二季</li>
+			<li>HOT5</li>
+			<li>演出阵容</li>
+			<li>新裤子</li>
+		</ul>
+	</div>
+</div>
+
+	
+	
+	<script>
+		/*星空背景*/
+		$(document).ready(function(){
+			var stars=800;  /*星星的密集程度，数字越大越多*/
+			var $stars=$(".stars");
+			var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+			for(var i=0;i<stars;i++){
+				var $star=$("<div/>").addClass("star");
+				$stars.append($star);
+			}
+			$(".star").each(function(){
+				var cur=$(this);
+                var s=0.2+(Math.random()*1);
+                var curR=r+(Math.random()*300);
+				cur.css({ 
+					transformOrigin:"0 0 "+curR+"px",
+					transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+				})
+			})
+		})
+		
+     /*瀑布流*/		
+     $(document).ready(function(){
+		 $('.boxgrid.caption').hover(function(){
+			 $(".cover", this).stop().animate({top:'120px'},{queue:false,duration:160});
+		 }, function() {
+			 $(".cover", this).stop().animate({top:'165px'},{queue:false,duration:160});
+		 });
+		 $('.boxgrid.captiona').hover(function(){
+			 $(".cover", this).stop().animate({top:'378px'},{queue:false,duration:160});
+		 }, function() {
+			 $(".cover", this).stop().animate({top:'427px'},{queue:false,duration:160});
+		 });
+	 });
+		$(function(){
+			$('#brand-waterfall').waterfall();
+		});
+		(function ($) {
+			$.fn.waterfall = function(options) {
+				var df = {
+					item: '.item',
+					margin: 30,
+					addfooter: true
+				};
+				options = $.extend(df, options);
+				return this.each(function() {
+					var $box = $(this), pos = [],
+						_box_width = $box.width(),
+						$items = $box.find(options.item),
+						_owidth = $items.eq(0).outerWidth() + options.margin,
+						_oheight = $items.eq(0).outerHeight() + options.margin,
+						_num = Math.floor(_box_width/_owidth);
+					(function() {
+						var i = 0;
+						for (; i < _num; i++) {
+							pos.push([i*_owidth,0]);
+						} 
+					})();
+					$items.each(function() {
+						var _this = $(this),
+							_temp = 0,
+							_height = _this.outerHeight() + options.margin;
+						_this.hover(function() {
+							_this.addClass('hover');
+						},function() {
+							_this.removeClass('hover');
+						});
+						for (var j = 0; j < _num; j++) {
+							if(pos[j][1] < pos[_temp][1]){
+								//暂存top值最小那列的index
+								_temp = j;
+							}
+						}
+						this.style.cssText = 'left:'+pos[_temp][0]+'px; top:'+pos[_temp][1]+'px;';
+						//插入后，更新下该列的top值
+						pos[_temp][1] = pos[_temp][1] + _height;
+					});
+					// 计算top值最大的赋给外围div
+					(function() {
+						var i = 0, tops = [];
+						for (; i < _num; i++) {
+							tops.push(pos[i][1]);
+						}
+						tops.sort(function(a,b) {
+							return a-b;
+						});
+						$box.height(tops[_num-1]);
+						//增加尾部填充div
+						if(options.addfooter){
+							addfooter(tops[_num-1]);
+						}
+					})();
+					function addfooter(max) {
+						var addfooter = document.createElement('div');
+						addfooter.className = 'item additem';
+						for (var i = 0; i < _num; i++) {
+							if(max != pos[i][1]){
+								var clone = addfooter.cloneNode(),
+									_height = max - pos[i][1] - options.margin;
+								clone.style.cssText = 'left:'+pos[i][0]+'px; top:'+pos[i][1]+'px; height:'+_height+'px;';
+								$box[0].appendChild(clone);
+							}
+						}
+					}
+				});
+			}
+		})(jQuery);
+	</script>
+</body>
+</html>
